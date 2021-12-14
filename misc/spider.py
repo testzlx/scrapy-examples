@@ -1,9 +1,6 @@
 #coding: utf-8
 
 import re
-import json
-from urlparse import urlparse
-
 
 from scrapy.selector import Selector
 try:

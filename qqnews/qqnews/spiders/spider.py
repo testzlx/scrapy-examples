@@ -2,12 +2,10 @@ import re
 import json
 
 
-from scrapy.selector import Selector
 try:
     from scrapy.spiders import Spider
 except:
     from scrapy.spiders import BaseSpider as Spider
-from scrapy.utils.response import get_base_url
 from scrapy.spiders import CrawlSpider, Rule
 from scrapy.linkextractors import LinkExtractor as sle
 
