@@ -137,6 +137,7 @@ class CommonSpider(CrawlSpider):
 
     def dfs(self, sel, rules, item_class, force_1_item):
         if sel is None:
+            print("sel is None")
             return []
 
         items = []
@@ -144,7 +145,8 @@ class CommonSpider(CrawlSpider):
             self.traversal(sel, rules, item_class, None, items)
         else:
             self.traversal_dict(sel, rules, item_class, None, items, force_1_item)
-
+        if len(items) == 0:
+            print("items is None")
         return items
 
     def parse_with_rules(self, response, rules, item_class, force_1_item=False):

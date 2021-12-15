@@ -43,19 +43,21 @@ class qqnewsSpider(CommonSpider):
     content_css_rules = {
         'text': '#Cnt-Main-Article-QQ p *::text',
         'images': '#Cnt-Main-Article-QQ img::attr(src)',
-        'images-desc': '#Cnt-Main-Article-QQ div p+ p::text',
+        'images_desc': '#Cnt-Main-Article-QQ div p+ p::text',
     }
 
     def parse_0(self, response):
         info('Parse0 '+response.url)
         x = self.parse_with_rules(response, self.list_css_rules, dict)
         pp.pprint(x)
+        return x
         #return self.parse_with_rules(response, self.list_css_rules, qqnewsItem)
 
     def parse_1(self, response):
         info('Parse1 '+response.url)
         x = self.parse_with_rules(response, self.content_css_rules, dict)
         pp.pprint(x)
+        return x
         #import pdb; pdb.set_trace()
 
     def parse_2(self, response):

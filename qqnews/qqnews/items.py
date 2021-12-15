@@ -8,9 +8,10 @@ from scrapy.item import Item, Field
 class qqnewsItem(Item):
     # define the fields for your item here like:
     name = Field()
-    title = Field()
+    text = Field()
     url = Field()
-    content = Field()
+    images = Field()
+    images_desc = Field()
 
 class PositionDetailItem(Item):
     title = Field()
