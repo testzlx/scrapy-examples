@@ -1,16 +1,9 @@
-import re
 import json
-from urlparse import urlparse
-import urllib
-import pdb
 
-
-from scrapy.selector import Selector
 try:
     from scrapy.spiders import Spider
 except:
     from scrapy.spiders import BaseSpider as Spider
-from scrapy.utils.response import get_base_url
 from scrapy.spiders import CrawlSpider, Rule
 from scrapy.linkextractors import LinkExtractor as sle
 
@@ -45,4 +38,5 @@ class v2exSpider(CommonSpider):
         x = self.parse_with_rules(response, self.list_css_rules, dict)
         print(json.dumps(x, ensure_ascii=False, indent=2))
         #pp.pprint(x)
+        return x
         # return self.parse_with_rules(response, self.css_rules, v2exItem)

@@ -23,7 +23,7 @@ NEWSPIDER_MODULE = 'v2ex.spiders'
 
 DOWNLOADER_MIDDLEWARES = {
    # 'misc.middleware.CustomHttpProxyMiddleware': 400,
-    'misc.middleware.CustomUserAgentMiddleware': 401,
+    #'misc.middleware.CustomUserAgentMiddleware': 401,
 }
 
 ITEM_PIPELINES = {
